@@ -11,23 +11,24 @@ Consulta e gera representações de documentos fiscais eletrônicos em uma inter
 
 ## Instalação
 
-1. Envie os arquivos deste repositório para a pasta pública do site (por exemplo, `htdocs`).
-2. Mantenha `api.php`, `index.html`, `app.js`, `styles.css`, `nfce-print.css`, `nfce-print.js`, os arquivos de marca e `xml-order.json` juntos.
-3. Habilite no PHP as extensões cURL, DOM, libxml e JSON. A hospedagem também precisa permitir upload de arquivos de até 5 MB.
-4. Acesse o domínio e teste a consulta. O endpoint `api.php?action=health` informa se os principais recursos do PHP estão disponíveis.
+1. Envie os arquivos deste repositório para a pasta pública do site, como `htdocs`.
+2. Mantenha juntos `api.php`, `index.html`, `app.js`, `styles.css`, os arquivos de impressão e os arquivos de marca.
+3. Use PHP 8 ou superior com as extensões cURL, DOM, libxml e JSON habilitadas.
+4. Configure a hospedagem para aceitar uploads de até 5 MB e acesse o site por HTTPS.
+5. Consulte `/api.php?action=health` para verificar a versão do PHP e as extensões principais.
 
-## Requisitos e observações
+## Notas de operação
 
-- Hospedagem com PHP 8 ou superior, HTTPS, cURL, DOM e suporte a uploads multipart.
-- A consulta por chave depende da disponibilidade e das regras da API ConsultaDANFE.
-- Para notas antigas recusadas pela API, é necessário possuir o XML autorizado completo (`nfeProc`). O XML não é enviado à API fiscal; é processado pelo próprio site.
-- O OCR é executado no navegador e carrega bibliotecas externas por CDN, portanto requer conexão à internet.
-- A visualização impressa é uma representação para consulta. Ela não substitui o XML fiscal nem um documento oficial assinado.
-- A consulta de NFC-e está integrada à SEFAZ-RS; disponibilidade e conteúdo podem mudar conforme o serviço oficial.
+A consulta por chave depende da disponibilidade e das regras da API ConsultaDANFE. Para notas antigas recusadas pelo serviço, é necessário possuir o XML autorizado completo (`nfeProc`). O arquivo é processado pelo próprio site e não é encaminhado à API fiscal.
 
-## Estrutura
+O OCR é executado no navegador e carrega bibliotecas externas por CDN, por isso requer conexão à internet. A visualização pode ser impressa ou salva como PDF, mas não substitui o XML fiscal nem um documento oficial assinado.
+
+A consulta de NFC-e está integrada à SEFAZ-RS. Sua disponibilidade e o conteúdo retornado dependem do serviço oficial.
+
+## Arquivos principais
 
 - `index.html`, `styles.css`, `app.js`: interface e leitura de documentos no navegador.
-- `api.php`: validação, consulta de NF-e, processamento seguro de XML e integração da NFC-e RS.
+- `api.php`: validação, consulta de NF-e, processamento de XML e integração com a SEFAZ-RS.
 - `nfce-print.css`, `nfce-print.js`: visualização e impressão da NFC-e.
 - `xml-order.json`: ordem dos elementos do XML normalizado.
+

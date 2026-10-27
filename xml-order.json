@@ -1,0 +1,279 @@
+{
+  "ide": [
+    "cUF",
+    "cNF",
+    "natOp",
+    "mod",
+    "serie",
+    "nNF",
+    "dhEmi",
+    "tpNF",
+    "idDest",
+    "cMunFG",
+    "tpImp",
+    "tpEmis",
+    "cDV",
+    "tpAmb",
+    "finNFe",
+    "indFinal",
+    "indPres",
+    "indIntermed",
+    "procEmi",
+    "verProc"
+  ],
+  "enderEmit": [
+    "xLgr",
+    "nro",
+    "xBairro",
+    "cMun",
+    "xMun",
+    "UF",
+    "CEP",
+    "cPais",
+    "xPais",
+    "fone"
+  ],
+  "emit": [
+    "CNPJ",
+    "xNome",
+    "enderEmit",
+    "IE",
+    "CRT"
+  ],
+  "enderDest": [
+    "xLgr",
+    "nro",
+    "xBairro",
+    "cMun",
+    "xMun",
+    "UF",
+    "CEP",
+    "cPais",
+    "xPais",
+    "fone"
+  ],
+  "dest": [
+    "CNPJ",
+    "xNome",
+    "enderDest",
+    "indIEDest",
+    "IE"
+  ],
+  "prod": [
+    "cProd",
+    "cEAN",
+    "xProd",
+    "NCM",
+    "CEST",
+    "cBenef",
+    "CFOP",
+    "uCom",
+    "qCom",
+    "vUnCom",
+    "vProd",
+    "cEANTrib",
+    "uTrib",
+    "qTrib",
+    "vUnTrib",
+    "indTot"
+  ],
+  "ICMS51": [
+    "orig",
+    "CST",
+    "modBC",
+    "pRedBC",
+    "vBC",
+    "pICMS",
+    "vICMSOp",
+    "pDif",
+    "vICMSDif",
+    "vICMS"
+  ],
+  "IPITrib": [
+    "CST",
+    "vBC",
+    "pIPI",
+    "vIPI"
+  ],
+  "IPI": [
+    "cEnq",
+    "IPITrib"
+  ],
+  "PISAliq": [
+    "CST",
+    "vBC",
+    "pPIS",
+    "vPIS"
+  ],
+  "COFINSAliq": [
+    "CST",
+    "vBC",
+    "pCOFINS",
+    "vCOFINS"
+  ],
+  "gIBSUF": [
+    "pIBSUF",
+    "vIBSUF"
+  ],
+  "gIBSMun": [
+    "pIBSMun",
+    "vIBSMun"
+  ],
+  "gCBS": [
+    "pCBS",
+    "vCBS"
+  ],
+  "gIBSCBS": [
+    "vBC",
+    "gIBSUF",
+    "gIBSMun",
+    "vIBS",
+    "gCBS"
+  ],
+  "IBSCBS": [
+    "CST",
+    "cClassTrib",
+    "gIBSCBS"
+  ],
+  "imposto": [
+    "ICMS",
+    "IPI",
+    "PIS",
+    "COFINS",
+    "IBSCBS"
+  ],
+  "det": [
+    "prod",
+    "imposto",
+    "infAdProd",
+    "vItem"
+  ],
+  "ICMSTot": [
+    "vBC",
+    "vICMS",
+    "vICMSDeson",
+    "vFCP",
+    "vBCST",
+    "vST",
+    "vFCPST",
+    "vFCPSTRet",
+    "vProd",
+    "vFrete",
+    "vSeg",
+    "vDesc",
+    "vII",
+    "vIPI",
+    "vIPIDevol",
+    "vPIS",
+    "vCOFINS",
+    "vOutro",
+    "vNF"
+  ],
+  "gIBS": [
+    "gIBSUF",
+    "gIBSMun",
+    "vIBS",
+    "vCredPres",
+    "vCredPresCondSus"
+  ],
+  "IBSCBSTot": [
+    "vBCIBSCBS",
+    "gIBS",
+    "gCBS"
+  ],
+  "total": [
+    "ICMSTot",
+    "IBSCBSTot",
+    "vNFTot"
+  ],
+  "transporta": [
+    "CNPJ",
+    "xNome",
+    "IE",
+    "xEnder",
+    "xMun",
+    "UF"
+  ],
+  "vol": [
+    "qVol",
+    "esp",
+    "pesoL",
+    "pesoB"
+  ],
+  "transp": [
+    "modFrete",
+    "transporta",
+    "vol"
+  ],
+  "fat": [
+    "nFat",
+    "vOrig",
+    "vDesc",
+    "vLiq"
+  ],
+  "dup": [
+    "nDup",
+    "dVenc",
+    "vDup"
+  ],
+  "cobr": [
+    "fat",
+    "dup"
+  ],
+  "detPag": [
+    "tPag",
+    "vPag"
+  ],
+  "infRespTec": [
+    "CNPJ",
+    "xContato",
+    "email",
+    "fone"
+  ],
+  "infNFe": [
+    "ide",
+    "emit",
+    "dest",
+    "det",
+    "total",
+    "transp",
+    "cobr",
+    "pag",
+    "infAdic",
+    "infRespTec"
+  ],
+  "Reference": [
+    "Transforms",
+    "DigestMethod",
+    "DigestValue"
+  ],
+  "SignedInfo": [
+    "CanonicalizationMethod",
+    "SignatureMethod",
+    "Reference"
+  ],
+  "Signature": [
+    "SignedInfo",
+    "SignatureValue",
+    "KeyInfo"
+  ],
+  "NFe": [
+    "infNFe",
+    "Signature"
+  ],
+  "infProt": [
+    "tpAmb",
+    "verAplic",
+    "chNFe",
+    "dhRecbto",
+    "nProt",
+    "digVal",
+    "cStat",
+    "xMotivo"
+  ],
+  "nfeProc": [
+    "NFe",
+    "protNFe"
+  ]
+}
+
